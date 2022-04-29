@@ -1,5 +1,5 @@
 aliases=(
-    "alias l='ls -lah'"
+    "alias l='ls -lah --group-directories-first'"
     "alias clear='clear && printf \"\\e[3J\"'"
     "alias c='clear'"
     "alias python='python3'"
