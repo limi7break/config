@@ -3,7 +3,7 @@ cat <<EOF > ~/.limitbreak
 
 alias l='ls -lah --group-directories-first'
 alias c='clear'
-alias clear='clear && printf \"\\e[3J\"'
+alias clear='clear && printf "\e[3J"'
 
 # Python stuff
 
