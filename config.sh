@@ -1,12 +1,18 @@
-aliases=(
-    "alias l='ls -lah --group-directories-first'"
-    "alias clear='clear && printf \"\\e[3J\"'"
-    "alias c='clear'"
-    "alias python='python3'"
-)
+cat <<EOF > ~/.limitbreak
+# Navigation
 
-for alias in "${aliases[@]}"; do
-    if ! grep -Fxq "$alias" ~/.bashrc; then
-        echo "$alias" >> ~/.bashrc
-    fi
-done
+alias l='ls -lah --group-directories-first'
+alias c='clear'
+alias clear='clear && printf \"\\e[3J\"'
+
+# Python stuff
+
+alias python='python3'
+activate () {
+    source $1/bin/activate
+}
+EOF
+if ! grep -Fxq "source ~/.limitbreak" ~/.bashrc; then
+    echo "source ~/.limitbreak" >> ~/.bashrc
+fi
+source ~/.bashrc
