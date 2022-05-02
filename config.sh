@@ -9,7 +9,7 @@ alias clear='clear && printf "\e[3J"'
 
 alias python='python3'
 activate () {
-    source $1/bin/activate
+    source \$1/bin/activate
 }
 EOF
 if ! grep -Fxq "source ~/.limitbreak" ~/.bashrc; then
