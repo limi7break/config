@@ -37,7 +37,7 @@ import re
 import sys
 import time
 
-print('loaded:', [x for x in globals().keys() if not x.startswith('_')])
+print('\nloaded:', [x for x in globals().keys() if not x.startswith('_')])
 EOF
 cat <<EOF > ~/.tmux.conf
 set -g default-terminal "xterm-256color"
