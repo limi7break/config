@@ -51,6 +51,10 @@ unbind C-b
 set -g history-limit 10000
 set -g allow-rename off
 
+# Move windows
+bind-key N swap-window -t +1 \; next-window
+bind-key P swap-window -t -1 \; previous-window
+
 # Join panes
 bind-key j command-prompt -p "join pane from:"  "join-pane -s '%%'"
 bind-key s command-prompt -p "send pane to:"  "join-pane -t '%%'"
