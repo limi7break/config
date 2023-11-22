@@ -69,5 +69,8 @@ set-window-option -g mode-keys vi
 # Open new pane in same directory
 bind '"' split-window -c "#{pane_current_path}"
 bind % split-window -h -c "#{pane_current_path}"
+
+# Enable mouse support
+set -g mouse on
 EOF
 touch ~/.hushlogin
