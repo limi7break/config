@@ -72,5 +72,6 @@ bind % split-window -h -c "#{pane_current_path}"
 
 # Enable mouse support
 set -g mouse on
+bind-key -Tcopy-mode-vi MouseDragEnd1Pane send -X copy-selection
 EOF
 touch ~/.hushlogin
