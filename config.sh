@@ -13,10 +13,13 @@ alias grep='egrep --color'
 alias serve='python3 -m http.server'
 alias wanip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias pn='pnpm'
-bind '"\e[A": history-search-backward'
-bind '"\e[B": history-search-forward'
-bind '"\e[1;3A": "\C-e \C-ucd ..\n\C-y\C-h"'
-bind '"\e[1;3B": "\C-e \C-ucd ./\C-i\n\C-y\C-h"'
+
+if [[ $- == *i* ]] ; then
+    bind '"\e[A": history-search-backward'
+    bind '"\e[B": history-search-forward'
+    bind '"\e[1;3A": "\C-e \C-ucd ..\n\C-y\C-h"'
+    bind '"\e[1;3B": "\C-e \C-ucd ./\C-i\n\C-y\C-h"'
+fi
 
 # Python stuff
 
