@@ -3,6 +3,10 @@
 cat <<EOF > ~/.limitbreak
 # QOL stuff
 
+if command -v eza >/dev/null 2>&1; then
+  alias ls='eza'
+fi
+
 alias l='ls -lhAF --group-directories-first --time-style=long-iso --color=auto'
 alias c='clear'
 alias clear='clear && printf "\e[3J"'
